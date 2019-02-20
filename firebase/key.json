@@ -1,0 +1,13 @@
+{
+    "type": "service_account",
+    "project_id": "creditcardtracker-73574",
+    "private_key_id": "6f0ae4cc77c9a82d8874cac95a69d3e7feac066e",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDC4/72CVbR6x+6\nTcAUg55dx8edvO8DTeXfWRotkgztSc3DpgxAlTRgDx1MJluA73CmCv5KuPrGXc3E\n2H9l4kMltYRs5PjWeNU5TV+CzCm7haNSB+yLJ4V3O87nIyMnkISuXL4V0QLFttJp\nT81NsYcd6ce3PibizCb00rxUWcVhqU+P7ogClSkMQoC+Q5iWICIU5Kc8IfOQC7+9\n39KlQP4Iau2voF8aJfctpTU15YbBMMQBHxohxStQ7LrXAHzjoxMFJsYb47o6+RnU\n4/WUZvncilIFqg0kqHJPtXiyk2mvFXBjbEfD1Sj0rmlDWtxZ994pTJnpWbYUfbFc\nyplb+jm/AgMBAAECggEAVO7pwS2mwYsXY6jYqdgGX1ZeXxbkjusW3/RD3VJGAe9l\nFfu6YTblAWv016frvtAaprIpykS9PU/KChxTwQIPQ1LM6GwNKeK1Aej/U9BH66o8\n19YON0K8/o55B/AfNPHdcOOID5fr/mBDaJPXpCFXAilM2UXjynkwDQf9/UC2LW3I\n3JTr0WbUp85/hAh0ZEG3Lmg/BGb917N6FyXuCVUMdzmDl0SRINPmzGbBPpqvnInn\nVB0+aaTgsqiGJfGP8YSDhQrz0OceCYsNautr7YY2FI/1wVJXQIOJvpyuckU0yy53\nAns5Fd+pEYnTIcvXBjieqxS6OeFdxICFkMN09ZvDeQKBgQD7//UJaL6lmnazvDQo\nKhjmGqSPA7pYR13eWCYbzv0VWVLJXsrkjzU0XmdqAAhTPDMVugf6RVvfO9nb/rH7\nIZq5KKVv+5Mt3yl9kYc1C/rL24YflEb4jRwcYgbFZjJOSeVBfGW9KzbOu1AjV4cH\nFCWEnYnE6cPfXAjCR9kn1mTxbQKBgQDF+/dNzU7mDX7m6oXk2TfGg0SgUBXpwpX3\n47seqkgfm8K90FEtX9hEiEGbOg87d8iOgLN75+QCoelfTWfLE6gzoMUOInCFU1S3\nIFXVdCMvtYJqPJxFGj5YCtzussmuUVdZ2tw9FwMOKPUcKirSwOZI/AgNeHMgjVvY\nWTB1LaEIWwKBgQC2RJnNZm+OhDybH+NxsZE0zcx8jKu5slTYv1VBA+PWDzdr4x5J\nVrOa3zVZXBCpc39XlaizgntC6Z1YG85L4DBzAE04w/PeV+1An4P2AGY0EOHf8XWr\nzRSqCtTu7k4whg5F4V4NBzarLJx4E5Tcr9u7Id9GB/belUjYjPMqd02nuQKBgQC7\n6ZHpc3NuYOLQ00mwUwdgUFlDe5/A1mK2/Jwu19pKvfERbfaOhYjkSxtR9MJeZCuk\nLb2tXgSJBxpUzUg1dHvSPMaryr5XnScsBPHS/j8jWjjlEpAT+nuv3uehW2qXHDc3\nXsZo6T2KJA+44sDwdgxcu3H9LxS+kczZxJV8solEPwKBgQCMKdPEV2fTg4VEGH/j\nXnuC/evCjjb4JeUKLYbwcH0ZCTnPWoWWxxhSZNH38CJC/XOPMZSgbXCSrWtHIlE0\ndXqIXIGeh5xjEYtEz17AothKzlRw/zsvhGjpnyPGRB99HfiwqivteXSEDHOOp4+U\nvP30OcX56YuCsDH9FyGxRReERQ==\n-----END PRIVATE KEY-----\n",
+    "client_email": "creditcardtracker-73574@appspot.gserviceaccount.com",
+    "client_id": "117657824843850773816",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/creditcardtracker-73574%40appspot.gserviceaccount.com"
+  }
+  
