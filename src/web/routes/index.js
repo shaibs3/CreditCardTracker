@@ -15,6 +15,9 @@ import RecipeViewComponent from '../components/Recipe';
 import SignUpContainer from '../../containers/SignUp';
 import SignUpComponent from '../components/SignUp';
 
+import CreateCreditCardContainer from '../../containers/CreateCreditCard';
+import CreditCardComponent from '../components/CreditCard';
+
 import LoginContainer from '../../containers/Login';
 import LoginComponent from '../components/Login';
 
@@ -70,10 +73,10 @@ const Index = () => (
       )}
     />
     <Route
-      path="/recipes"
+      path="/create-new-credit-card"
       render={props => (
-        <TemplateSidebar pageTitle="Recipes">
-          <RecipesContainer {...props} Layout={RecipesComponent} />
+        <TemplateSidebar pageTitle="Create new credit card">
+          <CreateCreditCardContainer {...props} Layout={CreditCardComponent} />
         </TemplateSidebar>
       )}
     />

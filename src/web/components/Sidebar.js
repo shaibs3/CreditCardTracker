@@ -14,12 +14,39 @@ const SidebarNavItems = () => (
         </span>
       </Link>
     </NavItem>
-    <NavItem>
+    {/* <NavItem>
       <Link className={`nav-link ${window.location.pathname.startsWith('/recipe') && 'active'}`} to="/recipes">
         <i className="icon-notebook" />
         {' '}
         <span>
-          Recipes
+          Visa
+        </span>
+      </Link>
+    </NavItem> */}
+    {/* <NavItem>
+      <Link className={`nav-link ${window.location.pathname.startsWith('/recipe') && 'active'}`} to="/recipes">
+        <i className="icon-notebook" />
+        {' '}
+        <span>
+          Master card
+        </span>
+      </Link>
+    </NavItem> */}
+    {/* <NavItem>
+      <Link className={`nav-link ${window.location.pathname.startsWith('/recipe') && 'active'}`} to="/recipes">
+        <i className="icon-notebook" />
+        {' '}
+        <span>
+          American express
+        </span>
+      </Link>
+    </NavItem> */}
+    <NavItem>
+      <Link className={`nav-link ${window.location.pathname.startsWith('/create-new-credit-card') && 'active'}`} to="/create-new-credit-card">
+        <i className="icon-notebook" />
+        {' '}
+        <span>
+          add new card
         </span>
       </Link>
     </NavItem>

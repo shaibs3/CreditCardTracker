@@ -1,6 +1,10 @@
 import React from 'react';
 import { Row, Col, Jumbotron } from 'reactstrap';
 
+
+import CreditCardContainer from '../../containers/CreateCreditCard';
+import CreditCardComponent from './CreditCard';
+
 const About = () => (
   <div>
     <Row>
@@ -12,12 +16,7 @@ const About = () => (
           For when you're looking to build 'the next big thing', but don't
           want to start from scratch.
         </p>
-        <p>
-          This App Starter Kit is built for those who need both a web app + mobile app, and don't
-          want to write and maintain two different code bases. The project shares the 'business
-          logic' and allows flexibility in View components to ensure your project looks and feels
-          native in each platform.
-        </p>
+
       </Jumbotron>
     </Row>
     <Row className="pt-5">
@@ -31,7 +30,9 @@ const About = () => (
           React Router is used to handle all web-side routing.
         </p>
         <p>
-          <a target="_blank" rel="noopener noreferrer" href="https://github.com/ReactTraining/react-router" className="btn btn-primary">
+          <a target="_blank" rel="noopener noreferrer"
+            href="https://github.com/ReactTraining/react-router"
+            className="btn btn-primary">
             React Router Docs
           </a>
         </p>
