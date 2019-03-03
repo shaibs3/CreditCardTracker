@@ -35,11 +35,8 @@ class CreditCard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: '',
-      lastName: '',
-      email: '',
-      password: '',
-      password2: '',
+      cardType: 'Visa',
+      lastFourDigits: '',
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -55,19 +52,21 @@ class CreditCard extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
     const { onFormSubmit, history } = this.props;
-    onFormSubmit(this.state)
-      .then(() => history.push('/login'))
+    let formData = {
+      cardType: this.state.cardType,
+      lastFourDigits:this.state.lastFourDigits,
+      member:this.props.member
+    }
+    onFormSubmit(formData)
+      .then(() => history.push('/'))
       .catch(e => console.log(`Error: ${e}`));
   }
 
   render() {
     const { loading, error } = this.props;
     const {
-      firstName,
-      lastName,
-      email,
-      password,
-      password2,
+      cardType,
+      lastFourDigits
     } = this.state;
 
     // Loading
@@ -94,25 +93,26 @@ class CreditCard extends React.Component {
                       Card type
                     </Label>
                    
-                    <Input type="select" name="select" id="exampleSelect">
-                      <option  >Visa</option>
-                      <option className="icon-home">Master card</option>
-                      <option className="icon-notebook">American express</option>
-                      <option>Diners</option>
-                      <option>Other</option>
+                    <Input type="select" name="cardType" id="cardType"
+                    onChange={this.handleChange}>
+                      <option value="Visa">Visa</option>
+                      <option value="Master card">Master card</option>
+                      <option value="American express"> American express</option>
+                      <option value="Dinerss">Dinerss</option>
+                      <option value="Other">Other</option>
                     </Input>
                   </FormGroup>
 
                   <FormGroup>
-                    <Label for="cardType">
+                    <Label for="lastFourDigits">
                       Last 4 digits
                     </Label>
                     <Input
                       type="text"
-                      name="cardType"
-                      id="cardType"
+                      name="lastFourDigits"
+                      id="lastFourDigits"
                       placeholder="1234"
-                      value={firstName}
+                      value={lastFourDigits}
                       onChange={this.handleChange}
                     />
                   </FormGroup>

@@ -1,12 +1,35 @@
 import React from 'react';
 import { Row, Col, Jumbotron } from 'reactstrap';
+import { connect } from 'react-redux';
+import { getCreditCards } from '../../actions/creditCard';
+
+import { Link, withRouter } from 'react-router-dom';
+
+class Home extends React.Component {
+ 
 
 
-import CreditCardContainer from '../../containers/CreateCreditCard';
-import CreditCardComponent from './CreditCard';
+  constructor(props) {
+    super(props);
+    this.state = {
+      
+    };
 
-const About = () => (
-  <div>
+    // this.handleChange = this.handleChange.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  componentDidMount = () => {
+   const { fetchCreditCards } = this.props;
+   //fetchCreditCards();
+  }
+
+
+
+
+
+render(){
+  return (
+    <div>
     <Row>
       <Jumbotron className="bg-primary text-white">
         <h1>
@@ -139,6 +162,19 @@ const About = () => (
       </Col>
     </Row>
   </div>
-);
+  )
+}
+}
+ 
 
-export default About;
+
+// const mapStateToProps = state => ({
+//   recipes: state.recipes || {},
+// });
+
+// const mapDispatchToProps = {
+//   fetchCreditCards: getCreditCards,
+// };
+
+export default Home;
+

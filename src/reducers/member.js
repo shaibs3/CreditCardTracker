@@ -11,6 +11,8 @@ export default function userReducer(state = initialState, action) {
           loading: false,
           error: null,
           uid: action.data.uid,
+          firstName: action.data.firstName,
+          lastName: action.data.lastName,
           email: action.data.email,
           emailVerified: action.data.emailVerified,
         };
@@ -19,6 +21,13 @@ export default function userReducer(state = initialState, action) {
     }
     case 'USER_DETAILS_UPDATE': {
       if (action.data) {
+        //Object.keys(action.data.cards).length
+
+        let arr = Object.keys(action.data.cards)
+        let new_arr = []
+        for (var key in arr) {
+          new_arr.push(arr[key]);
+      }
         return {
           ...state,
           loading: false,
@@ -27,6 +36,7 @@ export default function userReducer(state = initialState, action) {
           lastName: action.data.lastName,
           signedUp: action.data.signedUp,
           role: action.data.role,
+          cards:new_arr
         };
       }
       return initialState;

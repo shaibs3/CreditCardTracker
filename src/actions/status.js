@@ -2,6 +2,7 @@
   * Show Error
   */
 export default function (dispatch, type, val) {
+
   return new Promise((resolve, reject) => {
     // Validate types
     const allowed = ['error', 'success', 'info', 'loading'];

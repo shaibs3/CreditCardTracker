@@ -3,7 +3,8 @@ import { Firebase, FirebaseRef } from '../lib/firebase';
 /**
   * Get this User's Favourite Recipes
   */
-export function getFavourites(dispatch) {
+export function getFavourites(dispatch)
+{
   if (Firebase === null) return () => new Promise(resolve => resolve());
 
   const UID = Firebase.auth().currentUser.uid;
@@ -11,7 +12,8 @@ export function getFavourites(dispatch) {
 
   const ref = FirebaseRef.child(`favourites/${UID}`);
 
-  return ref.on('value', (snapshot) => {
+  return ref.on('value', (snapshot) =>
+  {
     const favs = snapshot.val() || [];
 
     return dispatch({
@@ -24,7 +26,8 @@ export function getFavourites(dispatch) {
 /**
   * Reset a User's Favourite Recipes in Redux (eg for logou)
   */
-export function resetFavourites(dispatch) {
+export function resetFavourites(dispatch)
+{
   return dispatch({
     type: 'FAVOURITES_REPLACE',
     data: [],
@@ -34,7 +37,8 @@ export function resetFavourites(dispatch) {
 /**
   * Update My Favourites Recipes
   */
-export function replaceFavourites(newFavourites) {
+export function replaceFavourites(newFavourites)
+{
   if (Firebase === null) return () => new Promise(resolve => resolve());
 
   const UID = Firebase.auth().currentUser.uid;
@@ -46,25 +50,48 @@ export function replaceFavourites(newFavourites) {
 /**
   * Get Meals
   */
-export function getMeals() {
-  if (Firebase === null) return () => new Promise(resolve => resolve());
+export function getMeals()
+{
+  debugger;
 
-  return dispatch => new Promise((resolve, reject) => FirebaseRef
-    .child('meals').once('value')
-    .then((snapshot) => {
-      const meals = snapshot.val() || [];
+  const UID = (
+    FirebaseRef
+    && Firebase
+    && Firebase.auth()
+    && Firebase.auth().currentUser
+    && Firebase.auth().currentUser.uid
+  ) ? Firebase.auth().currentUser.uid : null;
 
-      return resolve(dispatch({
-        type: 'MEALS_REPLACE',
-        data: meals,
-      }));
-    }).catch(reject)).catch(e => console.log(e));
+  if (!UID) return false;
+
+
+
+  return dispatch => new Promise(async (resolve, reject) =>
+  {
+
+
+    const ref = FirebaseRef.child(`users/${UID}`);
+
+    return ref.on('value', (snapshot) =>
+    {
+      const userData = snapshot.val() || [];
+      debugger;
+      return dispatch({
+        type: 'USER_DETAILS_UPDATE',
+        data: userData,
+      });
+    });
+
+  })
+
+
 }
 
 /**
   * Set an Error Message
   */
-export function setError(message) {
+export function setError(message)
+{
   return dispatch => new Promise(resolve => resolve(dispatch({
     type: 'RECIPES_ERROR',
     data: message,
@@ -74,12 +101,15 @@ export function setError(message) {
 /**
   * Get Recipes
   */
-export function getRecipes() {
+export function getRecipes()
+{
   if (Firebase === null) return () => new Promise(resolve => resolve());
 
   return dispatch => new Promise(resolve => FirebaseRef.child('recipes')
-    .on('value', (snapshot) => {
+    .on('value', (snapshot) =>
+    {
       const recipes = snapshot.val() || [];
+      
 
       return resolve(dispatch({
         type: 'RECIPES_REPLACE',

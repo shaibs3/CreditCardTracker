@@ -8,16 +8,17 @@ import { PersistGate } from 'redux-persist/es/integration/react';
 import configureStore from '../store/index';
 import * as serviceWorker from './register-service-worker';
 import Routes from './routes/index';
-
+import { getCreditCards } from '../actions/creditCard';
 // Components
 import Loading from './components/Loading';
 
 // Load css
 import './styles/style.scss';
 
-const { persistor, store } = configureStore();
+export const { persistor, store } = configureStore();
 // persistor.purge(); // Debug to clear persist
 
+getCreditCards();
 const Root = () => (
   <Provider store={store}>
     <PersistGate loading={<Loading />} persistor={persistor}>

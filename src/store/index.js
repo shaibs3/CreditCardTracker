@@ -19,10 +19,11 @@ const middleware = [thunk];
 const configureStore = () => {
   const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-  const store = createStore(
+ const store = createStore(
     reducer,
     composeEnhancer(applyMiddleware(...middleware)),
   );
+
 
   const persistor = persistStore(
     store,

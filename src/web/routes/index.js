@@ -31,7 +31,7 @@ import Error from '../components/Error';
 
 const Index = () => (
   <Switch>
-    <Route
+    {/* <Route
       exact
       path="/"
       render={props => (
@@ -39,13 +39,21 @@ const Index = () => (
           <Home {...props} />
         </TemplateSidebar>
       )}
-    />
+    /> */}
     <Route
       path="/sign-up"
       render={props => (
         <TemplateNothing pageTitle="Sign Up">
           <SignUpContainer {...props} Layout={SignUpComponent} />
         </TemplateNothing>
+      )}
+    />
+     <Route
+      path="/"
+      render={props => (
+        <TemplateSidebar pageTitle="Recipes">
+          <RecipesContainer {...props} Layout={RecipesComponent} />
+        </TemplateSidebar>
       )}
     />
     <Route
@@ -63,7 +71,7 @@ const Index = () => (
           <ForgotPasswordContainer {...props} Layout={ForgotPasswordComponent} />
         </TemplateNothing>
       )}
-    />
+    />,
     <Route
       path="/update-profile"
       render={props => (
