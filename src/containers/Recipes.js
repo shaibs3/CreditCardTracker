@@ -10,7 +10,7 @@ class RecipeListing extends Component {
     recipes: PropTypes.shape({
       loading: PropTypes.bool.isRequired,
       error: PropTypes.string,
-      recipes: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+      // recipes: PropTypes.arrayOf(PropTypes.shape()).isRequired,
     }).isRequired,
     match: PropTypes.shape({
       params: PropTypes.shape({}),
@@ -24,31 +24,33 @@ class RecipeListing extends Component {
     match: null,
   }
 
-  componentDidMount = () => this.fetchRecipes();
+  //componentDidMount = () => this.fetchRecipes();
 
   /**
     * Fetch Data from API, saving to Redux
     */
-  fetchRecipes = () => {
-    const { fetchRecipes, fetchMeals, showError } = this.props;
-    return fetchRecipes()
-      .then(() => fetchMeals())
-      .catch((err) => {
-        console.log(`Error: ${err}`);
-        return showError(err);
-      });
-  }
+  // fetchRecipes = () => {
+  //   const { fetchRecipes, fetchMeals, showError } = this.props;
+  //   return fetchRecipes()
+  //     .then(() => fetchMeals())
+  //     .catch((err) => {
+  //       console.log(`Error: ${err}`);
+  //       return showError(err);
+  //     });
+  // }
 
   render = () => {
+    debugger;
     const { Layout, recipes, match } = this.props;
     const id = (match && match.params && match.params.id) ? match.params.id : null;
-
     return (
       <Layout
         recipeId={id}
-        error={recipes.error}
-        loading={recipes.loading}
-        recipes={recipes.recipes}
+        // error={recipes.error}
+       
+        // loading={recipes.loading}
+
+        cards={this.props.member.cards}
         reFetch={() => this.fetchRecipes()}
       />
     );
@@ -56,7 +58,7 @@ class RecipeListing extends Component {
 }
 
 const mapStateToProps = state => ({
-  recipes: state.recipes || {},
+  member: state.member || {},
 });
 
 const mapDispatchToProps = {
@@ -66,3 +68,4 @@ const mapDispatchToProps = {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(RecipeListing);
+//export default RecipeListing;

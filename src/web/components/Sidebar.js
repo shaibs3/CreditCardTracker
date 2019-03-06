@@ -43,9 +43,8 @@ function creditCardsLinks()
   {
     return (
       <NavItem>
-        <Link className={`nav-link ${window.location.pathname.startsWith('/recipes:id') 
-        && 'active'}`} to="/recipes:id">
-        <img src={getCardLogo(item) }  style={{"margin-right" :'0.4rem'}} height="23" width="23" ></img>
+        <Link className={`nav-link`} to={`/cards/${item}`}>
+          <img src={getCardLogo(item)} style={{ "marginRight": '0.4rem' }} height="23" width="23" ></img>
           {' '}
           <span>
             {item}
@@ -59,7 +58,7 @@ function creditCardsLinks()
 
 const SidebarNavItems = () => (
   <div>
-     <NavItem>
+    <NavItem>
       <Link className={`nav-link ${window.location.pathname.startsWith('/recipe') && 'active'}`} to="/recipes">
         <i className="icon-notebook" />
         {' '}

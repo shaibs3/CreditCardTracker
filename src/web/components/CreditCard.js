@@ -119,9 +119,6 @@ class CreditCard extends React.Component {
   
 
 
-                  <Button color="primary">
-                    Submit
-                  </Button>
                 </Form>
                 <hr />
               </CardBody>
@@ -132,5 +129,7 @@ class CreditCard extends React.Component {
     );
   }
 }
+
+
 
 export default withRouter(CreditCard);

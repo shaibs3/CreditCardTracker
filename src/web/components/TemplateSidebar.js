@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 import Member from '../../containers/Member';
 import Header from './Header';
 import Footer from './Footer';
-import { Sidebar } from './Sidebar';
+import {Sidebar}  from './Sidebar';
 
 const Template = ({ pageTitle, children }) => (
   <div>

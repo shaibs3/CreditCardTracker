@@ -2,10 +2,14 @@ import Store from '../store/member';
 
 export const initialState = Store;
 
-export default function userReducer(state = initialState, action) {
-  switch (action.type) {
+export default function userReducer(state = initialState, action)
+{
+  switch (action.type)
+  {
     case 'USER_LOGIN': {
-      if (action.data) {
+      debugger;
+      if (action.data)
+      {
         return {
           ...state,
           loading: false,
@@ -20,14 +24,17 @@ export default function userReducer(state = initialState, action) {
       return initialState;
     }
     case 'USER_DETAILS_UPDATE': {
-      if (action.data) {
+      debugger;
+      if (action.data)
+      {
         //Object.keys(action.data.cards).length
-
+        debugger;
         let arr = Object.keys(action.data.cards)
         let new_arr = []
-        for (var key in arr) {
+        for (var key in arr)
+        {
           new_arr.push(arr[key]);
-      }
+        }
         return {
           ...state,
           loading: false,
@@ -36,13 +43,14 @@ export default function userReducer(state = initialState, action) {
           lastName: action.data.lastName,
           signedUp: action.data.signedUp,
           role: action.data.role,
-          cards:new_arr
+          cards: new_arr
         };
       }
       return initialState;
     }
     case 'USER_ERROR': {
-      if (action.data) {
+      if (action.data)
+      {
         return {
           ...state,
           loading: false,

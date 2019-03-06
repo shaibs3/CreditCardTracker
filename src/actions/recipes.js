@@ -52,7 +52,6 @@ export function replaceFavourites(newFavourites)
   */
 export function getMeals()
 {
-  debugger;
 
   const UID = (
     FirebaseRef
@@ -75,7 +74,6 @@ export function getMeals()
     return ref.on('value', (snapshot) =>
     {
       const userData = snapshot.val() || [];
-      debugger;
       return dispatch({
         type: 'USER_DETAILS_UPDATE',
         data: userData,
