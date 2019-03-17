@@ -43,7 +43,7 @@ function creditCardsLinks()
   {
     return (
       <NavItem>
-        <Link className={`nav-link`} to={`/cards/${item}`}>
+        <Link className={`nav-link`} to={`/cards/${item}`} key={item}>
           <img src={getCardLogo(item)} style={{ "marginRight": '0.4rem' }} height="23" width="23" ></img>
           {' '}
           <span>

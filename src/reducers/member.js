@@ -7,7 +7,6 @@ export default function userReducer(state = initialState, action)
   switch (action.type)
   {
     case 'USER_LOGIN': {
-      debugger;
       if (action.data)
       {
         return {
@@ -24,11 +23,9 @@ export default function userReducer(state = initialState, action)
       return initialState;
     }
     case 'USER_DETAILS_UPDATE': {
-      debugger;
       if (action.data)
       {
         //Object.keys(action.data.cards).length
-        debugger;
         let arr = Object.keys(action.data.cards)
         let new_arr = []
         for (var key in arr)

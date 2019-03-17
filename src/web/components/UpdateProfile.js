@@ -128,6 +128,21 @@ class UpdateProfile extends React.Component {
                     />
                   </FormGroup>
 
+                  <FormGroup>
+                    <Label for="cardType">
+                      Card type
+                    </Label>
+                   
+                    <Input type="select" name="cardType" id="cardType"
+                    onChange={this.handleChange}>
+                      <option value="Visa">Visa</option>
+                      <option value="Master card">Master card</option>
+                      <option value="American express"> American express</option>
+                      <option value="Dinerss">Dinerss</option>
+                      <option value="Other">Other</option>
+                    </Input>
+                  </FormGroup>
+
                   <FormGroup check style={{ marginTop: 20 }}>
                     <Label check>
                       <Input
@@ -196,6 +211,9 @@ class UpdateProfile extends React.Component {
                           onChange={this.handleChange}
                         />
                       </FormGroup>
+
+
+                      
                     </div>
                   )}
                   <Button style={{ marginTop: 20 }} color="primary">

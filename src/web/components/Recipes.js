@@ -47,7 +47,7 @@ const RecipeListing = ({ error, loading, recipes }) => {
             Recipes
           </h1>
           <p>
-            The following data is read directly from Firebase.
+            The  ollowing data is read directly from Firebase.
           </p>
         </Col>
       </Row>

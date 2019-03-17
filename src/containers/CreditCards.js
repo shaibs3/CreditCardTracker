@@ -30,6 +30,7 @@ class RecipeListing extends Component {
     * Fetch Data from API, saving to Redux
     */
   fetchRecipes = () => {
+    console.log("shhshshshshshshshs")
     const { fetchRecipes, fetchMeals, showError } = this.props;
     return fetchRecipes()
       .then(() => fetchMeals())

@@ -99,16 +99,15 @@ export function setError(message)
 /**
   * Get Recipes
   */
-export function getRecipes()
+export function getRecipes(path, uid)
 {
   if (Firebase === null) return () => new Promise(resolve => resolve());
 
-  return dispatch => new Promise(resolve => FirebaseRef.child('recipes')
+  return dispatch => new Promise(resolve => FirebaseRef.child(`users/${uid}/${path}/dates`)
     .on('value', (snapshot) =>
     {
       const recipes = snapshot.val() || [];
       
-
       return resolve(dispatch({
         type: 'RECIPES_REPLACE',
         data: recipes,
